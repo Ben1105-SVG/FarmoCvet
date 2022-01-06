@@ -33,7 +33,7 @@ class MedicineController extends Controller
                     $query->whereHas('plants', function ($query) use ($param) {
                         $query->where('name', 'like', '%' . $param . '%');
                     });
-                })
+                }) 
                 ->orWhere(function ($query) use ($param) {
                     $query->whereHas('pharmoAgents', function ($query) use ($param) {
                         $query->where('name', 'like', '%' . $param . '%');
